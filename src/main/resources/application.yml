@@ -14,3 +14,6 @@ server:
 wechat:
   mpAppId: wxd898fcb01713c658
   mpAppSecret: 29d8650bd31472aa8700e3b0d7937f2
+  mchId: 1409146202
+  mchKey: c976503d34ca432c601361f969fd8d85
+  keyPath: /var/weixin_cert/h5.p12
