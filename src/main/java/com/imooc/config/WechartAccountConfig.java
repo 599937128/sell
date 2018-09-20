@@ -33,4 +33,9 @@ public class WechartAccountConfig {
      * 商户证书路径
      */
     private String keyPath;
+
+    /**
+     * 微信支付异步通知的地址
+     */
+    private String notifyUrl;
 }

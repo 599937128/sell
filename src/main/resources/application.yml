@@ -17,3 +17,4 @@ wechat:
   mchId: 1409146202
   mchKey: c976503d34ca432c601361f969fd8d85
   keyPath: /var/weixin_cert/h5.p12
+  notifyUrl: http:127.0.0.1/sell/pay/notify
