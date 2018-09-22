@@ -33,7 +33,7 @@
                         <td>${orderDTO.getOrderStatusEnum().message}</td>
                         <td>${orderDTO.getPayStatusEnum().message}</td>
                         <td>${orderDTO.createTime}</td>
-                        <td>详情</td>
+                        <td><a href="http://127.0.0.1:8080/sell/seller/order/detail?orderId=${orderDTO.orderId}">详情</a></td>
                         <td>
                             <#if orderDTO.getOrderStatusEnum().message != "已取消">
                                 <a href="http://127.0.0.1:8080/sell/seller/order/cancel?orderId=${orderDTO.orderId}">取消</a>
