@@ -42,9 +42,9 @@ public class OrderServiceImplTest {
     public void create() {
 
         OrderDTO orderDTO = new OrderDTO();
-        orderDTO.setBuyerName("王文英");
+        orderDTO.setBuyerName("路自豪");
         orderDTO.setBuyerAddress("北京海淀西二旗");
-        orderDTO.setBuyerPhone("13301452122");
+        orderDTO.setBuyerPhone("17802971617");
         orderDTO.setBuyerOpenid(BUYER_OPENID);
 
         //购物车
@@ -52,7 +52,7 @@ public class OrderServiceImplTest {
 
         OrderDetail o1 = new OrderDetail();
         o1.setProductId("1234568");
-        o1.setProductQuantity(1);
+        o1.setProductQuantity(3);
 
         OrderDetail o2 = new OrderDetail();
         o2.setProductId("123457");
