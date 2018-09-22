@@ -232,4 +232,20 @@ public class OrderServiceImpl implements OrderService {
         }
         return orderDTO;
     }
+
+    /**
+     * 查询订单(卖家端)
+     * @param pageable
+     * @return
+     */
+    @Override
+    public Page<OrderDTO> findList(Pageable pageable) {
+        Page<OrderMaster> orderMasterPage = orderMasterRepository.findAll(pageable);
+        // 把orderMaster的内容转换为orderDTO的集合
+        List<OrderDTO> orderDTOList = OrderMaster2OrderDTOConverter.conver(orderMasterPage.getContent());
+
+        // 返回Page对象
+        Page<OrderDTO> orderDTOPage = new PageImpl<>(orderDTOList,pageable,orderMasterPage.getTotalElements());
+        return orderDTOPage;
+    }
 }

@@ -42,9 +42,9 @@ public class OrderServiceImplTest {
     public void create() {
 
         OrderDTO orderDTO = new OrderDTO();
-        orderDTO.setBuyerName("吕辽辽");
-        orderDTO.setBuyerAddress("北京海淀");
-        orderDTO.setBuyerPhone("13201452121");
+        orderDTO.setBuyerName("王文英");
+        orderDTO.setBuyerAddress("北京海淀西二旗");
+        orderDTO.setBuyerPhone("13301452122");
         orderDTO.setBuyerOpenid(BUYER_OPENID);
 
         //购物车
@@ -102,5 +102,13 @@ public class OrderServiceImplTest {
         OrderDTO orderDTO = orderService.findOne(ORDER_ID);
         OrderDTO result = orderService.paid(orderDTO);
         Assert.assertEquals(PayStatusEnum.SUCCESS.getCode(),result.getPayStatus());
+    }
+
+    @Test
+    public void findList1() {
+        PageRequest request = new PageRequest(0,2);
+        Page<OrderDTO> orderDTOPage = orderService.findList(request);
+        //Assert.assertNotEquals(0, orderDTOPage.getTotalElements());
+        Assert.assertTrue("查询所有的订单列表",orderDTOPage.getTotalElements() > 0);
     }
 }
