@@ -22,7 +22,7 @@ import java.util.List;
 public class ProductServiceImpl implements ProductService {
 
     @Autowired
-    ProductInfoRepository repository;
+    private ProductInfoRepository repository;
 
     @Override
     public ProductInfo findOne(String productId) {
@@ -77,5 +77,33 @@ public class ProductServiceImpl implements ProductService {
             //保存
             repository.save(productInfo);
         }
+    }
+
+    @Override
+    public ProductInfo onSale(String productId) {
+        ProductInfo productInfo= repository.findOne(productId);
+        if (productInfo == null) {
+            throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+        }
+        if (productInfo.getProductStatusEnum() == ProductStatusEnum.UP) {
+            throw new SellException(ResultEnum.PRODUCT_STATUS_ERROR);
+        }
+        // 更新
+        productInfo.setProductStatus(ProductStatusEnum.UP.getCode());
+        return repository.save(productInfo);
+    }
+
+    @Override
+    public ProductInfo offSale(String productId) {
+        ProductInfo productInfo= repository.findOne(productId);
+        if (productInfo == null) {
+            throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+        }
+        if (productInfo.getProductStatusEnum() == ProductStatusEnum.Down) {
+            throw new SellException(ResultEnum.PRODUCT_STATUS_ERROR);
+        }
+        // 更新
+        productInfo.setProductStatus(ProductStatusEnum.Down.getCode());
+        return repository.save(productInfo);
     }
 }

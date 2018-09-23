@@ -1,6 +1,5 @@
 package com.imooc.controller;
 
-import com.imooc.dataobject.OrderMaster;
 import com.imooc.dto.OrderDTO;
 import com.imooc.enums.ResultEnum;
 import com.imooc.exception.SellException;
