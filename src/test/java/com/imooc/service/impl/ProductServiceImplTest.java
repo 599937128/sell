@@ -53,7 +53,7 @@ public class ProductServiceImplTest {
         productInfo.setProductName("皮皮虾");
         productInfo.setProductPrice(new BigDecimal(3.2));
         productInfo.setProductStock(100);
-        productInfo.setProductDescription("很好吃的虾");
+        productInfo.setProductDescription("很好吃的虾啦啦");
         productInfo.setProductIcon("http://csjsai.jpg");
         productInfo.setProductStatus(ProductStatusEnum.Down.getCode());
         productInfo.setCategoryType(2);
