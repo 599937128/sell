@@ -21,7 +21,7 @@ import static org.junit.Assert.*;
 public class OrderDetailRepositoryTest {
 
     @Autowired
-    OrderDetailRepository repository;
+    private OrderDetailRepository repository;
 
     @Test
     public void saveTest(){

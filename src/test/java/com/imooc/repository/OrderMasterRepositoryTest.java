@@ -22,7 +22,7 @@ import static org.junit.Assert.*;
 public class OrderMasterRepositoryTest {
 
     @Autowired
-    OrderMasterRepository repository;
+    private OrderMasterRepository repository;
 
     private final String OPENID = "110110";
     @Test
