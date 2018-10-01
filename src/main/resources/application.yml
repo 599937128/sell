@@ -9,7 +9,7 @@ spring:
   jackson:
     default-property-inclusion: non_null
   redis:
-    host: 127.0.0.1
+    host: 192.168.192.151
     port: 6379
 server:
   context-path: /sell
@@ -23,6 +23,8 @@ wechat:
   mchKey: c976503d34ca432c601361f969fd8d85
   keyPath: /var/weixin_cert/h5.p12
   notifyUrl: http:127.0.0.1/sell/pay/notify
+  templateId:
+    orderStatus: e-Cqqcdsicdsncdmicjicnk_7saniacn-yessd
 
 projectUrl:
   wechatMpAuthorize: http://sell.natapp4.cc

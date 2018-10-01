@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class WechatPayConfig {
 
     @Autowired
-    private WechartAccountConfig accountConfig;
+    private WechatAccountConfig accountConfig;
 
     @Bean
     public BestPayServiceImpl bestPayService() {

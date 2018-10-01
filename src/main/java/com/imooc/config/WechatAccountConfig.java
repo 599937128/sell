@@ -4,6 +4,8 @@ import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
 
+import java.util.Map;
+
 /**
  * @program: sell
  * @Date: 2018/9/17 23:30
@@ -13,7 +15,7 @@ import org.springframework.stereotype.Component;
 @Data
 @Component
 @ConfigurationProperties(prefix = "wechat")
-public class WechartAccountConfig {
+public class WechatAccountConfig {
 
     /**
      * 公众平台id
@@ -54,5 +56,8 @@ public class WechartAccountConfig {
      */
     private String notifyUrl;
 
-
+    /**
+     * 微信消息模板id
+     */
+    private Map<String, String> templateId;
 }
