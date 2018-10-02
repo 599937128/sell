@@ -30,3 +30,7 @@ projectUrl:
   wechatMpAuthorize: http://sell.natapp4.cc
   wechatOpenAuthorize: http://sell.natapp4.cc
   sell: 127.0.0.1
+# 追踪mybatis的详情打印sql语句之类
+logging:
+  level:
+    com.imooc.dataobject.mapper: trace

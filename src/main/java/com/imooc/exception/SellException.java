@@ -1,6 +1,7 @@
 package com.imooc.exception;
 
 import com.imooc.enums.ResultEnum;
+import lombok.Getter;
 
 /**
  * @program: sell
@@ -8,6 +9,7 @@ import com.imooc.enums.ResultEnum;
  * @Author: Mr.lv
  * @Description:
  */
+@Getter
 public class SellException extends RuntimeException{
 
     private Integer code;

@@ -9,6 +9,7 @@ import com.imooc.dto.OrderDTO;
 import com.imooc.enums.OrderStatusEnum;
 import com.imooc.enums.PayStatusEnum;
 import com.imooc.enums.ResultEnum;
+import com.imooc.exception.ResponseBankException;
 import com.imooc.exception.SellException;
 import com.imooc.repository.OrderDetailRepository;
 import com.imooc.repository.OrderMasterRepository;
@@ -73,6 +74,7 @@ public class  OrderServiceImpl implements OrderService {
             ProductInfo productInfo =productService.findOne(orderDetail.getProductId());
             if (productInfo == null) {
                 throw new SellException(ResultEnum.PRODUCT_NOT_EXIST);
+//                throw new ResponseBankException();
             }
 
             //2. 计算订单总价 很多件总价加上每一件的金额
